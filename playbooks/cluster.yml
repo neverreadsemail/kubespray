@@ -5,6 +5,9 @@
     - name: show kube_version
       ansible.builtin.debug:
         var: kube_version
+    - name: show playbook directory
+      ansible.builtin.debug:
+        var: playbook_dir
     - name: failbob
       ansible.builtin.fail:
         msg: short circuit exiting for debugging
