@@ -5,9 +5,10 @@
     - name: show kube_version
       ansible.builtin.debug:
         var: kube_version
-    - name: fail
+    - name: failbob
       ansible.builtin.fail:
         msg: short circuit exiting for debugging
+      when: true
 
 - name: Common tasks for every playbooks
   import_playbook: boilerplate.yml
