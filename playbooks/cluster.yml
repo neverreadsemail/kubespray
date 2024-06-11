@@ -3,10 +3,11 @@
   hosts: all
   tasks:
     - name: show kube_version
-      debug:
+      ansible.builtin.debug:
         var: kube_version
     - name: fail
-      fail: short circuit exiting for debugging
+      ansible.builtin.fail:
+        msg: short circuit exiting for debugging
 
 - name: Common tasks for every playbooks
   import_playbook: boilerplate.yml
