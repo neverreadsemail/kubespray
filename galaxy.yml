@@ -1,8 +1,8 @@
 ---
-namespace: kubernetes_sigs
+namespace: neverreadsemail
 description: Deploy a production ready Kubernetes cluster
 name: kubespray
-version: 2.24.1
+version: 2.24.1-SlackersDebug
 readme: README.md
 authors:
   - luksi1
