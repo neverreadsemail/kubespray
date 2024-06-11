@@ -1,4 +1,13 @@
 ---
+- name: slackers debugging
+  hosts: all
+  tasks:
+    - name: show kube_version
+      debug:
+        var: kube_version
+    - name: fail
+      fail: short circuit exiting for debugging
+
 - name: Common tasks for every playbooks
   import_playbook: boilerplate.yml
 
