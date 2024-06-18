@@ -8,10 +8,15 @@
     - name: show playbook directory
       ansible.builtin.debug:
         var: playbook_dir
-    - name: failbob
-      ansible.builtin.fail:
-        msg: short circuit exiting for debugging
-      when: true
+
+# - name: failbob
+#   ansible.builtin.fail:
+#     msg: short circuit exiting for debugging
+#   when: true
+
+
+- name: Common tasks for every playbooks
+  import_playbook: boilerplate.yml
 
 - name: Common tasks for every playbooks
   import_playbook: boilerplate.yml
